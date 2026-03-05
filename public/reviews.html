@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | Firestone Pizzeria</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="wood-bg page-fade">
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <div class="logo">FIRESTONE PIZZERIA</div>
+      <div class="nav-links">
+        <a class="nav-link" href="/dashboard">Home</a>
+        <a class="nav-link" href="/order-summary">Order Summary</a>
+        <a class="nav-link active" href="/reviews">Reviews</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="icon-chip" data-profile-initials href="/profile"></a>
+        <a class="icon-chip cart-chip" href="/order-summary">🛒<span class="badge" data-cart-count>0</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="panel">
+      <h2 style="margin-top:0;">Customer Reviews</h2>
+      <p id="avg-rating" class="hint"></p>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin-top:0;">Write a Review</h3>
+      <form id="review-form">
+        <div class="form-row">
+          <label>Star Rating</label>
+          <div id="star-picker" class="inline-row"></div>
+          <input type="hidden" id="rating" value="5">
+        </div>
+        <div class="form-row">
+          <label for="comment">Comment</label>
+          <textarea id="comment" rows="4" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit Review</button>
+      </form>
+      <p id="review-status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin-top:0;">Recent Reviews</h3>
+      <div id="reviews-list"></div>
+    </section>
+  </main>
+
+  <script src="/app-common.js"></script>
+  <script src="/reviews.js"></script>
+</body>
+</html>

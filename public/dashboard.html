@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Firestone Pizzeria</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="wood-bg page-fade">
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <div class="logo">FIRESTONE PIZZERIA</div>
+      <div class="nav-links">
+        <a class="nav-link active" href="/dashboard">Home</a>
+        <a class="nav-link" href="#menu-top">Menu</a>
+        <a class="nav-link" href="/order-summary">Order Summary</a>
+        <a class="nav-link" href="/reviews">Reviews</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="icon-chip" data-profile-initials href="/profile"></a>
+        <a class="icon-chip cart-chip" href="/order-summary" title="Cart">
+          🛒
+          <span class="badge" data-cart-count>0</span>
+        </a>
+        <button class="btn btn-muted" id="logout-btn" type="button">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-visual" aria-label="Firestone generated hero art"></div>
+      <div class="hero-overlay">
+        <h1>Wood-Fired Luxury Taste</h1>
+        <p>Fresh Dough. Premium Cheese. Wood-Fired Perfection.</p>
+        <div>
+          <a class="btn btn-primary" href="#menu-top" style="text-decoration:none;display:inline-block;">Order Now</a>
+        </div>
+      </div>
+      <div class="steam"><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="category-bar">
+      <a class="chip" href="#classic-pizzas">🍕 Pizzas</a>
+      <a class="chip" href="#starters-appetizers">🥖 Starters</a>
+      <a class="chip" href="#spicy-desi-flavors">🌶 Desi Flavors</a>
+      <a class="chip" href="#pasta">🍝 Pasta</a>
+      <a class="chip" href="#other-items">🍔 Burgers & More</a>
+      <a class="chip" href="#desserts">🍰 Desserts</a>
+      <a class="chip" href="#beverages">🥤 Beverages</a>
+      <a class="chip" href="#deals-combos">🎉 Deals & Combos</a>
+    </section>
+
+    <section id="menu-top" class="panel">
+      <h2 style="margin:0;">Premium Menu</h2>
+      <p class="hint" style="margin:0.4rem 0 0;">Choose items and customize with size, crust, and quantity.</p>
+    </section>
+
+    <div id="menu-sections"></div>
+    <div class="footer-gap"></div>
+  </main>
+
+  <div class="mobile-cart">
+    <a class="btn btn-primary" href="/order-summary">🛒 View Cart (<span data-cart-count>0</span>)</a>
+  </div>
+
+  <div id="item-modal" class="modal-backdrop">
+    <div class="modal">
+      <h3 id="modal-title" style="margin-top:0;"></h3>
+      <p class="hint" id="modal-base"></p>
+      <div class="form-row">
+        <label for="modal-size">Size</label>
+        <select id="modal-size">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>Extra Large</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="modal-crust">Crust</label>
+        <select id="modal-crust">
+          <option>Regular</option>
+          <option>Cheese Stuffed Crust</option>
+          <option>Sausage Stuffed Crust</option>
+          <option>Cream Cheese Crust</option>
+          <option>Garlic Butter Crust</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="modal-qty">Quantity</label>
+        <input id="modal-qty" type="number" value="1" min="1">
+      </div>
+      <p class="card-price" id="modal-total"></p>
+      <div class="inline-row">
+        <button type="button" class="btn btn-primary" id="modal-add-btn">Add to Cart</button>
+        <button type="button" class="btn btn-muted" id="modal-close-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app-common.js"></script>
+  <script src="/dashboard.js"></script>
+</body>
+</html>

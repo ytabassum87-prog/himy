@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Firestone Pizzeria</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="wood-bg page-fade">
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <div class="logo">FIRESTONE PIZZERIA</div>
+      <div class="nav-links">
+        <a class="nav-link" href="/dashboard">Home</a>
+        <a class="nav-link" href="/order-summary">Order Summary</a>
+        <a class="nav-link" href="/reviews">Reviews</a>
+        <a class="nav-link active" href="/about">About Us</a>
+        <a class="icon-chip" data-profile-initials href="/profile"></a>
+        <a class="icon-chip cart-chip" href="/order-summary">🛒<span class="badge" data-cart-count>0</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="panel about-visual">
+      <h2 style="margin-top:0;">About Firestone Pizzeria</h2>
+      <p id="about-content"></p>
+      <p id="about-phone"></p>
+      <p id="about-owner"></p>
+      <p class="hint" id="about-updated"></p>
+    </section>
+
+    <section class="panel" id="admin-about-panel" style="display:none;">
+      <h3 style="margin-top:0;">Admin: Edit About Section</h3>
+      <form id="about-form">
+        <div class="form-row">
+          <label for="content">Content</label>
+          <textarea id="content" rows="4" required></textarea>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input id="phone" required>
+        </div>
+        <div class="form-row">
+          <label for="owner_name">Owner Name</label>
+          <input id="owner_name" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Save About Content</button>
+      </form>
+      <p id="about-status" class="status"></p>
+      <p class="hint"><a class="link" href="/admin">Open Full Admin Panel</a></p>
+    </section>
+  </main>
+
+  <script src="/app-common.js"></script>
+  <script src="/about.js"></script>
+</body>
+</html>

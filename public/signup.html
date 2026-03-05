@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Firestone Pizzeria</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="wood-bg page-fade">
+  <main class="auth-shell">
+    <section class="auth-card" style="width:min(96vw,560px);">
+      <h1 class="brand-title">Create Account</h1>
+      <p class="tagline">Join Firestone for faster premium ordering.</p>
+      <form data-auth-form="signup">
+        <div class="form-row">
+          <label for="full_name">Full Name</label>
+          <input id="full_name" name="full_name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" required>
+        </div>
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required>
+        </div>
+        <div class="form-row">
+          <label for="confirm_password">Confirm Password</label>
+          <input id="confirm_password" name="confirm_password" type="password" required>
+        </div>
+        <div class="form-row">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        <div class="form-row inline-row">
+          <input id="agree_terms" name="agree_terms" type="checkbox" style="width:auto;">
+          <label for="agree_terms" style="margin:0;">I agree to Terms & Conditions</label>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%;">Create Account</button>
+      </form>
+      <p id="auth-status" class="status"></p>
+      <p class="hint">Already have an account? <a class="link" href="/login">Login</a></p>
+    </section>
+  </main>
+  <script src="/app-common.js"></script>
+  <script src="/auth.js"></script>
+</body>
+</html>

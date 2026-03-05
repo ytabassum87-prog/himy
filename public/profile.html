@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Firestone Pizzeria</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="wood-bg page-fade">
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <div class="logo">FIRESTONE PIZZERIA</div>
+      <div class="nav-links">
+        <a class="nav-link" href="/dashboard">Home</a>
+        <a class="nav-link" href="/order-summary">Order Summary</a>
+        <a class="nav-link" href="/reviews">Reviews</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="nav-link active" href="/profile">Profile</a>
+        <a class="icon-chip" data-profile-initials href="/profile"></a>
+        <a class="icon-chip cart-chip" href="/order-summary">Cart<span class="badge" data-cart-count>0</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="panel">
+      <h2 style="margin-top:0;">My Profile</h2>
+      <div id="profile-user" class="hint">Loading user information...</div>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin-top:0;">Order Stats</h3>
+      <div id="profile-stats" class="hint">Loading stats...</div>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin-top:0;">Update Profile</h3>
+      <form id="profile-form">
+        <div class="form-row">
+          <label for="full_name">Full Name</label>
+          <input id="full_name" name="full_name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" required>
+        </div>
+        <div class="form-row">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Save Profile</button>
+      </form>
+      <p id="profile-form-status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin-top:0;">Change Password</h3>
+      <form id="password-form">
+        <div class="form-row">
+          <label for="current_password">Current Password</label>
+          <input id="current_password" name="current_password" type="password" required>
+        </div>
+        <div class="form-row">
+          <label for="new_password">New Password</label>
+          <input id="new_password" name="new_password" type="password" required>
+        </div>
+        <div class="form-row">
+          <label for="confirm_password">Confirm New Password</label>
+          <input id="confirm_password" name="confirm_password" type="password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Update Password</button>
+      </form>
+      <p id="password-form-status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin-top:0;">Favorite Items</h3>
+      <div id="profile-favorites" class="hint">Loading favorites...</div>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin-top:0;">Order History</h3>
+      <div id="profile-history" class="hint">Loading order history...</div>
+    </section>
+  </main>
+
+  <script src="/app-common.js"></script>
+  <script src="/profile.js"></script>
+</body>
+</html>

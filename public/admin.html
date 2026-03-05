@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | Firestone Pizzeria</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="wood-bg page-fade">
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <div class="logo">FIRESTONE PIZZERIA ADMIN</div>
+      <div class="nav-links">
+        <a class="nav-link" href="/dashboard">Home</a>
+        <a class="nav-link" href="/order-summary">Order Summary</a>
+        <a class="nav-link active" href="/admin">Admin</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+    <section class="panel">
+      <h2 style="margin-top:0;">Sales Analytics</h2>
+      <div id="analytics-wrap"></div>
+    </section>
+    <section class="panel">
+      <h2 style="margin-top:0;">Manage Orders</h2>
+      <div id="orders-wrap"></div>
+    </section>
+    <section class="panel">
+      <h2 style="margin-top:0;">Menu Price Editor</h2>
+      <div id="menu-editor-wrap"></div>
+      <p id="admin-status" class="status"></p>
+    </section>
+  </main>
+  <script src="/app-common.js"></script>
+  <script src="/admin.js"></script>
+</body>
+</html>

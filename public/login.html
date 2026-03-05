@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Firestone Pizzeria</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="wood-bg page-fade">
+  <main class="auth-shell">
+    <section class="auth-card">
+      <h1 class="brand-title">FIRESTONE PIZZERIA</h1>
+      <p class="tagline">Fresh Dough. Premium Cheese. Wood-Fired Perfection.</p>
+      <form data-auth-form="login">
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required>
+        </div>
+        <div class="form-row inline-row">
+          <input id="remember_me" name="remember_me" type="checkbox" style="width:auto;">
+          <label for="remember_me" style="margin:0;">Remember Me</label>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%;">Login</button>
+      </form>
+      <p id="auth-status" class="status"></p>
+      <p class="hint">Create a New Account: <a class="link" href="/signup">Sign Up</a></p>
+      <p class="hint">Demo admin: admin@firestone.com / admin123</p>
+    </section>
+  </main>
+  <script src="/app-common.js"></script>
+  <script src="/auth.js"></script>
+</body>
+</html>

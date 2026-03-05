@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Summary | Firestone Pizzeria</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="wood-bg page-fade">
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <div class="logo">FIRESTONE PIZZERIA</div>
+      <div class="nav-links">
+        <a class="nav-link" href="/dashboard">Home</a>
+        <a class="nav-link active" href="/order-summary">Order Summary</a>
+        <a class="nav-link" href="/reviews">Reviews</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="icon-chip" data-profile-initials href="/profile"></a>
+        <a class="icon-chip cart-chip" href="/order-summary">🛒<span class="badge" data-cart-count>0</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="panel">
+      <h2 style="margin-top:0;">Current Cart</h2>
+      <div id="cart-wrap"></div>
+      <div class="inline-row" style="margin-top:0.8rem;">
+        <button class="btn btn-primary" id="place-order-btn" type="button">Place Order</button>
+        <button class="btn btn-muted" id="cancel-order-btn" type="button">Cancel Latest Order</button>
+        <button class="btn btn-muted" id="clear-cart-btn" type="button">Clear Cart</button>
+      </div>
+      <p id="order-status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2 style="margin-top:0;">Live Order Status</h2>
+      <div id="live-order"></div>
+    </section>
+
+    <section class="panel">
+      <h2 style="margin-top:0;">Order History</h2>
+      <div id="history-wrap"></div>
+    </section>
+  </main>
+
+  <script src="/app-common.js"></script>
+  <script src="/order-summary.js"></script>
+</body>
+</html>
